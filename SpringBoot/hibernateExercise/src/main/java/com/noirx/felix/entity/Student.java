@@ -14,6 +14,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -22,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Student {
 
 	@Id
@@ -33,6 +35,7 @@ public class Student {
 	private String lastName;
 	@Column(nullable = false, unique = true)
 	private String email;
+	private Boolean isWorking;
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "enrolments", joinColumns = @JoinColumn(name= "user_id", referencedColumnName = "id"),
 	inverseJoinColumns = @JoinColumn(name = "classes_id", referencedColumnName = "id"))

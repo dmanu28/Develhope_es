@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.noirx.felix.dto.CarDTO;
-import com.noirx.felix.dto.CarMapper;
+import com.noirx.felix.dto.mapper.CarMapper;
 import com.noirx.felix.entity.Car;
 import com.noirx.felix.repository.CarRepo;
 import com.noirx.felix.service.CarService;

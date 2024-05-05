@@ -1,7 +1,8 @@
-package com.noirx.felix.dto;
+package com.noirx.felix.dto.mapper;
 
 import org.springframework.stereotype.Component;
 
+import com.noirx.felix.dto.CarDTO;
 import com.noirx.felix.entity.Car;
 
 @Component
